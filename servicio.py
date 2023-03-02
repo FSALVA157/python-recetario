@@ -82,12 +82,19 @@ class FileManager:
         except Exception as e:
             raise Exception(f"Error Inesperado al eliminar dato en el archivo: {self.__archivo}, error: {e}")
         
-    def updateOne(self, key, value):
-        data = self.getAll()
-        if(key not in data):
-            return False
+    def updateOne(self, key, value) -> str:
+        try:
+            data = self.getAll()
+            if(key not in data):
+                raise Exception(f"El objeto con clave {llave} no existe en los datos")
+            else:
+                data[key]=value
+                self.create(data)                
+        except IOError as e:
+            raise Exception(f"Error al intentar leer o escribir el archivo: {self.__archivo}, error: {e}") 
+        except Exception as e:
+            raise Exception(f"Error Inesperado al eliminar dato en el archivo: {self.__archivo}, error: {e}")
         else:
-            data[key]=value
-            self.create(data)
-            return True
+            return f"El objeto con clave {key} ha sido elminado con Exito!"
+            
         
