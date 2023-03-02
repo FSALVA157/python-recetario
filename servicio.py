@@ -30,11 +30,14 @@ class FileManager:
         else:
             return data
         
-    def getOne(self, key: str):
+    def getOne(self, key: str) -> dict:
         try:            
             data = self.getAll()
             if(key not in data):
-                raise Exception(f"La clave consultada no existe en los datos")
+                return {
+                    "status": False,
+                    "message": "La clave consultada no existe en los datos"
+                }                
             obj = data[key]
             # return obj
         except ValueError as e:
@@ -42,7 +45,12 @@ class FileManager:
         except Exception as e:
             raise Exception(f"Error Inesperado al leer el archivo: {self.__archivo}, error: {e}")
         else:
-            return obj
+            return {
+                "status": True,
+                "data": {
+                    key: obj
+                }
+            }
 
     
     def addOne(self, clave: str, valor) -> str: 
@@ -86,7 +94,7 @@ class FileManager:
         try:
             data = self.getAll()
             if(key not in data):
-                raise Exception(f"El objeto con clave {llave} no existe en los datos")
+                raise Exception(f"El objeto con clave {key} no existe en los datos")
             else:
                 data[key]=value
                 self.create(data)                

@@ -23,11 +23,16 @@ class Usuarios:
     def login(self, username, clave):
         try:
             usuario_activo = self.userService.getOne(username)
+            if(clave != usuario_activo):
+                return {
+                "status": False,
+                "message": "La clave Ingresada es Erronea"
+                     }
         except Exception as e:
             #raise Exception(f"errof: {e}")
             return {
                 "status": False,
-                "message": e
+                "message": str(e)
             }
         else:
             return {
@@ -35,27 +40,53 @@ class Usuarios:
                 "message": "Login Exitoso"
             }
 
-#         nombre = self.username
-#         clave = self.clave
-#         for usuario in self.lista_usuarios:
-#             if usuario["username"] == nombre and usuario["clave"] == clave: 
-#                 print("El ingreso a sido exitoso")
-#             else:
-#                 print("El nombre de usuario o la clave es incorrecta")
+
     
-#     def mostrar_usuarios(self):
-#         print("La lista de usuarios es la siguiente: \n", self.lista_usuarios)
+    def mostrar_usuarios(self):
+        try:
+            usuarios = self.userService.getAll()        
+        except Exception as e:
+            return {
+                "status": False,
+                "message": str(e)
+            }
+        else:         
+         return {
+             "status": True,
+             "usuarios": usuarios
+         }
     
     
-#     def crear_usuario(self, username, clave):
-#         for usuario in self.lista_usuarios:
-#             if usuario["username"] == username:
-#                 print("El nombre de usuario esta en uso")
-#             else:
-#                 nuevo_usuario = {"username": username, "clave": clave, "id" : uuid.uuid4}
-#                 self.lista_usuarios.append(nuevo_usuario)
-#                 print("El nuevo usuario se ha creado exitosamente.")
-#         ##Deberiamos pedir confirmacion de contraseña?? Como hacerlo
+    def crear_usuario(self, username: str, clave: str):
+        try:
+            dato = self.userService.getOne(username)            
+            if(dato['status'] == True):
+               return {
+                    "status": False,
+                    "message": "El usuario ya existe"
+                    }                        
+            self.userService.addOne(username, clave)
+        except Exception as e:            
+            return {
+                "status": False,
+                "message": str(e)
+            }
+        else:
+
+            return{
+                    "status": False,
+                    "message": f"El usuario {username} ha sido creado con Exito!"
+            }
+
+
+        # for usuario in self.lista_usuarios:
+        #     if usuario["username"] == username:
+        #         print("El nombre de usuario esta en uso")
+        #     else:
+        #         nuevo_usuario = {"username": username, "clave": clave, "id" : uuid.uuid4}
+        #         self.lista_usuarios.append(nuevo_usuario)
+        #         print("El nuevo usuario se ha creado exitosamente.")
+        ##Deberiamos pedir confirmacion de contraseña?? Como hacerlo
 
 #     def eliminar_usuario(self, username):
 #         for usuario in self.lista_usuarios:
