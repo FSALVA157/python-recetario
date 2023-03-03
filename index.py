@@ -1,5 +1,6 @@
 from servicio import *
 from usuarios import *
+from recetario import *
 import json
 
 #archivo1 = FileManager('genericoDB.json')
@@ -19,13 +20,15 @@ import json
 #print(archivo1.deleteOne("Pizza"))
 #print(archivo1.updateOne("Sopa","sopa de cabello de angel"))
 
-yo = Usuarios()
+#yo = Usuarios()
 #yo.crearDB()
 # print(yo.login("xxavier","123456"))
 #data = yo.mostrar_usuarios()["usuarios"]
 # print(type(data))
 #print(data)
-res = yo.crear_usuario("marcus","pin1547")
-print(res)
+#res = yo.crear_usuario("marcus","pin1547")
+#print(res)
 # res = yo.eliminar_usuario("marcus")
 # print(res)
+cocinera = Recetario()
+cocinera.crearDB()
