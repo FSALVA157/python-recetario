@@ -81,14 +81,18 @@ class FileManager:
             info = self.getAll()
             if(llave in info):
                 del info[llave]
-                self.create(info)
-                return f"El objeto {llave} ha sido eliminado Exitosamente!"      
+                self.create(info)                
             else:
                 raise Exception(f"El objeto con clave {llave} no existe en los datos")
         except IOError as e:
             raise Exception(f"Error al intentar leer o escribir el archivo: {self.__archivo}, error: {e}") 
         except Exception as e:
             raise Exception(f"Error Inesperado al eliminar dato en el archivo: {self.__archivo}, error: {e}")
+        else:
+            return {
+                    "status": True,
+                    "message": f"El objeto con clave {llave} ha sido eliminado exitosamente"
+                }            
         
     def updateOne(self, key, value) -> str:
         try:
