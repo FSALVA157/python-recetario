@@ -13,12 +13,19 @@ class Usuarios:
         try: 
             self.userService.create({"xxavier": "123456"})
         except Exception as e:
-            raise Exception(f"errof: {e}")
+            return {
+                "status": False, 
+                "message": str(e)
+            }
+        else:
+            return {
+                "status": True,
+                "message": "El Archivo de Usuario ha sido creado con Exito"
+            }
 
     def login(self, username, clave):
         try:
-            usuario_activo = self.userService.getOne(username)
-            #print(usuario_activo)
+            usuario_activo = self.userService.getOne(username)            
             if(clave != usuario_activo["data"][username]):
                 return {
                 "status": False,
@@ -55,13 +62,13 @@ class Usuarios:
     
     def crear_usuario(self, username: str, clave: str):
         try:
-            dato = self.userService.getOne(username)            
-            if(dato['status'] == True):
+            #dato = self.userService.getOne(username)            
+            dato = self.userService.addOne(username, clave)
+            if(dato['status'] == False):
                return {
                     "status": False,
                     "message": "El usuario ya existe"
-                    }                        
-            self.userService.addOne(username, clave)
+                    }                             
         except Exception as e:            
             return {
                 "status": False,

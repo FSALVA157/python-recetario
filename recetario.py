@@ -32,5 +32,31 @@ class Recetario:
                "favorita": "True"}
                })
        except Exception as e:
-           raise Exception(f"errof: {e}")
+            return {
+                "status": False,
+                "message": str(e)
+            }
+       else:
+           return {
+                "status": True,
+                "message": "El archivo recetario ha sido creado con Exito"
+            }
        
+    def addOne(self, nombre, receta):
+        try:
+            res = self.recetarioService.addOne(nombre, receta)
+            if(res["status"] == False):
+                return {
+                "status": False,
+                "message": "La receta ya existe"
+            }
+        except Exception as e:
+            return {
+                "status": False,
+                "message": str(e)
+            }
+        else:
+           return {
+                "status": True,
+                "message": "El archivo recetario ha sido creado con Exito"
+            }

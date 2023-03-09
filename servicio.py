@@ -57,12 +57,14 @@ class FileManager:
         try:
             data = self.getAll()
             if(clave in  data):
-                raise Exception(f"el objeto que intenta agregar ya existe!")
+                return {
+                    "status": False,
+                    "message": "el objeto ya existe"
+                }
             else:
                 data[clave] = valor
                 with open(FileManager.base_url+self.__archivo,"w") as writable_file:
-                    json.dump(data, writable_file)
-                return "Operación de agregar datos Exitosa!!"
+                    json.dump(data, writable_file)                
         except FileNotFoundError as e:
             raise Exception(f"No se encontro el archivo: {self.__archivo}")
         except PermissionError as e:
@@ -75,6 +77,11 @@ class FileManager:
             raise Exception(f"Se intentó agregar un valor no válido al archivo JSON {self.__archivo}. Error: {e}")
         except Exception as e:
             raise Exception(f"Error Inesperado al escribir el archivo: {self.__archivo}, error: {e}")
+        else:
+            return {
+                "status": True,
+                "message": "Objeto agregado exitosamente"
+            }
     
     def deleteOne(self, llave: str)->str:
         try:
