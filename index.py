@@ -23,8 +23,8 @@ valor = {
             "picar carne"
         ],
         "imagenes": [
-            "ruta imagen 1",
-            "ruta imagen 2"
+            "/img/carne.jpg",
+            "/img/plato.png",
         ],
         "duracion": "30 min",
         "coccion": "60 min",
@@ -34,9 +34,17 @@ valor = {
             "carne",
             "caliente"
         ],
-        "favorita": "True"
+        "favorita": True
     }
-print(recet.addOne(llave,valor))
+
+#recet.filterByLabel('guiso')
+print(recet.filterByLabel('jamon'))
+#recet.crearDB()
+#print(recet.getOne('guiso')['receta'])
+#print(recet.updateOne('sopa',valor)['message'])
+#print(recet.getAll()['recetas'])
+#print(recet.delOne("sopa"))
+#print(recet.addOne(llave,valor))
 #archivo1 = FileManager('genericoDB.json')
 #archivo1.create({"Guiso": "Receta de Guiso","Sopa": "Receta de Sopa","Empanada": "Receta de Empanada"})
 #print(archivo1.getAll())
