@@ -38,11 +38,11 @@ valor = {
     }
 
 #recet.filterByLabel('guiso')
-print(recet.filterByLabel('jamon'))
+#print(recet.filterByLabel('jamon'))
 #recet.crearDB()
 #print(recet.getOne('guiso')['receta'])
 #print(recet.updateOne('sopa',valor)['message'])
-#print(recet.getAll()['recetas'])
+print(recet.getAll()['recetas'])
 #print(recet.delOne("sopa"))
 #print(recet.addOne(llave,valor))
 #archivo1 = FileManager('genericoDB.json')
