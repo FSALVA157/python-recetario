@@ -144,12 +144,7 @@ class Recetario:
             for nombre, datos in res.items():
                 if(etiqueta in datos['etiquetas']):
                     obj = {nombre: datos}
-                    filtradas.append(obj)
-            # if(res["status"] == False):
-            #  return {
-            #     "status": False,
-            #     "message": f"la receta {nombre} no Existe"
-            # }   
+                    filtradas.append(obj)            
         except Exception as e:
             return {
                 "status": False,
@@ -159,6 +154,23 @@ class Recetario:
            return {
                 "status": True,
                 "recetas": filtradas
+            }
+        
+    def recetaDelDia(self):
+        from random import choice
+        try:
+            res = self.recetarioService.getAll()
+            keys = list(res.keys())
+            elegida = choice(keys)                
+        except Exception as e:
+            return {
+                "status": False,
+                "message": str(e)
+            }
+        else:
+           return {
+                "status": True,
+                "r_del_dia": elegida
             }
 
         

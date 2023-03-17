@@ -1,12 +1,14 @@
 import tkinter as tk
 import tkinter.ttk as ttk
+from ttkthemes import ThemedTk
+import tkinter.messagebox as messagebox
 from recetario import *
 
 class VentanaPrincipal(ttk.Frame):
 
     def __init__(self, master=None):
         super().__init__(master)
-        self.master = master
+        self.master = master        
         self.master.title("Ventana Principal")
         self.master.geometry("1500x700")
         self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
@@ -19,7 +21,13 @@ class VentanaPrincipal(ttk.Frame):
         self.create_main_frame()
 
         
-        
+    def del_receta(self, key):
+        # método que elimina una receta
+        resultado = self.recetas_service.delOne(key)
+        if resultado["status"] == True:
+            messagebox.showinfo("Éxito", resultado["message"])
+        else:
+            messagebox.showerror("Error", resultado["message"])    
 
     def create_menu_bar(self):
         self.menu_bar = tk.Menu(self.master, bg="#73C0C8")
@@ -53,6 +61,18 @@ class VentanaPrincipal(ttk.Frame):
      self.main_frame = ttk.Frame(self.master)
      self.main_frame.pack(side="right", fill="both", expand=True)
      self.main_frame.configure(style="Main.TFrame")
+
+     #solicitando al servicio la receta del dia
+     res = self.recetas_service.recetaDelDia()
+     if(res['status']==True):
+         n_deldia = res['r_del_dia']
+         peticion = self.recetas_service.getOne(n_deldia)         
+         if(peticion['status']==True):
+            r_deldia = peticion['receta']
+         else:
+            r_deldia = {}
+     else:
+         n_deldia = ""
  
      # Crear el widget Panedwindow para dividir el frame principal en dos
      self.panedwindow = ttk.Panedwindow(self.main_frame, orient="horizontal")
@@ -100,7 +120,7 @@ class VentanaPrincipal(ttk.Frame):
          fila_boton_editar.pack(side="left", padx=10, pady=10)
  
          # Agregar el botón de eliminar
-         fila_boton_eliminar = ttk.Button(fila_frame, text="Eliminar", style="Botones.TButton")
+         fila_boton_eliminar = ttk.Button(fila_frame, text="Eliminar", style="Botones.TButton",command=lambda valor = dato: self.del_receta(valor))         
          fila_boton_eliminar.pack(side="left", padx=10, pady=10)
  
      # Crear el frame para el objeto
@@ -109,21 +129,47 @@ class VentanaPrincipal(ttk.Frame):
      self.panedwindow.add(self.objeto_frame)
  
      # Agregar los widgets para mostrar el objeto
-     self.label_titulo = ttk.Label(self.objeto_frame, text="Título del objeto")
+     self.label_titulo = ttk.Label(self.objeto_frame, text=n_deldia)
      self.label_titulo.pack(pady=10)
  
-     self.label_descripcion = ttk.Label(self.objeto_frame, text="Descripción del objeto")
-     self.label_descripcion.pack(pady=10)
+    #  self.label_descripcion = ttk.Label(self.objeto_frame, text="Descripción del objeto")
+    #  self.label_descripcion.pack(pady=10)
+     self.fields_frame = ttk.LabelFrame(self.objeto_frame, text="Contenido", )
+     self.fields_frame.pack(pady=10)     
+     obj = r_deldia[n_deldia]
+    #  for key, value in obj.items():
+    #         print(key)
+    #         print(value)
+
+     max_label_width = 0  # variable para almacenar el ancho del label más ancho
+
+     for key, value in obj.items():
+          # crear y empaquetar label de clave
+          field_label = ttk.Label(self.fields_frame, text=key+":", anchor="e", justify="right")
+          field_label.pack(side="top", padx=10, pady=5)
+          
+          # obtener el ancho requerido del label de clave
+          label_width = field_label.winfo_reqwidth()
+          if label_width > max_label_width:
+              max_label_width = label_width
+          
+          # crear y empaquetar label de valor
+          value_label = ttk.Label(self.fields_frame, text=value, anchor="w", justify="left")
+          value_label.pack(side="top", padx=10, pady=5)
+
+     # establecer el ancho del LabelFrame de acuerdo con el ancho requerido del label más ancho
+     self.fields_frame.configure(width=max_label_width+20)  # sumar un padding de 20 para dar espacio adicional
  
      # Establecer el estilo de los frames
      s = ttk.Style()
      s.configure("Main.TFrame", background="#4189A1")
      s.configure("Lista.TFrame", background="#E6E6E6")
-     s.configure("Objeto.TFrame", background="#F5F5DC")
- 
+     s.configure("Objeto.TFrame", background="#D2D9E8")
+     #s.configure("Objeto.frame_obj", background="#D2D9E8")
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
+    #root = tk.Tk()
+    root = ThemedTk(theme="ubuntu")
     app = VentanaPrincipal(master=root)
     app.mainloop()
