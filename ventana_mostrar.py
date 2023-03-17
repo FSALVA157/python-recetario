@@ -17,7 +17,11 @@ class VentanaMostrar(ttk.Frame):
         self.master = master
         self.master.title("Mostrar Receta")
         self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
-        self.ingredientes= []
 
         #instanciamos la clase controlador de Receta
         self.recetas_service = Recetario()
+
+    def mostrar(self):
+        
+        clave = self.buscador
+        res= self.recetas_service.getOne(key)
