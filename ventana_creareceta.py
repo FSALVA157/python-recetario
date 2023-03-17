@@ -2,21 +2,27 @@ import tkinter as tk
 import tkinter.ttk as ttk
 from ttkthemes import ThemedTk
 from recetario import *
+""" 
+Importamos tkinter para poder crear la ventana
+Tambien importamos todos los metodos y clases de recetario que nos permite utlizarlas en lo que necesitemos
+"""
 
 class VentanaCreareceta(ttk.Frame):
+    """
+    En esta clase creamos la ventana que permite crear una nueva receta
+    """
 
     def __init__(self, master=None):
         super().__init__(master)
         self.master = master
         self.master.title("Crear Receta")
-        ##self.master.geometry("1200x600") La comento porque queda muy grande la ventana
         self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
+        self.ingredientes= []
 
-
-         #instanciamos la clase controlador de Receta
+        #instanciamos la clase controlador de Receta
         self.recetas_service = Recetario()
 
-        # Creacion de los widgets
+        # Creacion de los widgets con los entry correspondientes
         tk.Label(self, text="Nombre de la nueva receta: ").grid(row=0, column=0)
         self.nombre_receta = tk.Entry(self)
         self.nombre_receta.grid(row=0, column=1)
@@ -60,18 +66,23 @@ class VentanaCreareceta(ttk.Frame):
         self.etiqueta = tk.Entry(self)
         self.etiqueta.grid(row=9, column=1)
 
-        # Crear un Checkbox para indicar si la receta es favorita
+        # Creamos un Checkbox para indicar si la receta es favorita
         self.es_favorita = tk.IntVar() # Variable de control para el Checkbox
         tk.Checkbutton(self, text="Si", variable=self.es_favorita).grid(row=10, column=1)
         tk.Label(self, text="Favorita (tildar si es favorita)").grid(row=10, column=0)
 
+        #Creamos los dos botones necesarios para poder invocar a las funciones necesarias
         tk.Button(self, text="Agregar receta", command=self.agregar_receta).grid(row=11, column=2)
+
+        tk.Button(self, text="Agregar ingrediente", command=self.agregar_ingrediente).grid(row=1, column=3)
 
         self.grid()
 
     def agregar_receta(self):
+        """
+          Funcion que permite consumir los datos de todos los campos entrados en los widgets de la ventana
+        """
         nombre=self.nombre_receta.get()
-        ingredientes=[{"nombre": self.nomb_ingr.get(), "cantidad": self.cantidad.get(), "unidad de medida": self.un_medida.get()}]
         preparacion= self.preparacion.get()
         imagenes= [self.imagenes.get()]
         duracion= self.duracion.get()
@@ -80,13 +91,42 @@ class VentanaCreareceta(ttk.Frame):
         etiquetas= [self.etiqueta.get()]
         es_favorita= self.es_favorita.get() == 1
 
-        receta= {"ingredietes": ingredientes, "preparacion": preparacion, "imagenes": imagenes, "duracion": duracion,
+        receta= {"ingredietes": self.ingredientes, "preparacion": preparacion, "imagenes": imagenes, "duracion": duracion,
                  "coccion": coccion, "fecha": fecha, "etiquetas": etiquetas, "es_favorita": es_favorita}
 
-        res= self.recetas_service.addOne(nombre,receta)
+        res= self.recetas_service.addOne(nombre,receta) # LLamamos al metodo addone del recetario
+
+        self.nombre_receta.delete(0, tk.END)
+        self.preparacion.delete(0, tk.END)
+        self.imagenes.delete(0, tk.END)
+        self.duracion.delete(0, tk.END)
+        self.coccion.delete(0, tk.END)
+        self.fecha.delete(0, tk.END)
+        self.etiqueta.delete(0, tk.END)
+        self.es_favorita.set(0)
+
+        self.nombre_receta.focus() # pone el cursor en el primer widget de la ventana
+
+    def agregar_ingrediente(self):
+        """ 
+        Funcion que permite agregar más de un ingrediente en la receta, guardando los datos de los campos 
+        """
+        nombre = self.nomb_ingr.get()
+        cantidad = self.cantidad.get()
+        unidad = self.un_medida.get()
+
+        self.ingredientes.append({"nombre": nombre, "cantidad": cantidad, "unidad de medida": unidad})
+        # Se agrega un diccionario nuevo con la data del ingrediente
+
+        #Para limpiar los Entry correspondientes
+        self.nomb_ingr.delete(0, tk.END)
+        self.cantidad.delete(0, tk.END)
+        self.un_medida.delete(0, tk.END)
+
+        self.nomb_ingr.focus() # pone el cursor en el primer widget de la sub ventana ingredientes
 
 
-    ### me falta borrar los entry que estan en pantalla 
+    
 if __name__ == "__main__":
     #root = tk.Tk()
     root = ThemedTk(theme="ubuntu")
@@ -94,6 +134,4 @@ if __name__ == "__main__":
     vent.mainloop()
     
 # tengo los siguientes problemas:
-# no puedo agregar mas de un ingrediente
-# no puedo borrar las celdas una vez que ya agregue la receta
 # falta que al terminar de un cartel de cargado exitosamente o de error
