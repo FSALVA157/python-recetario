@@ -137,29 +137,6 @@ class VentanaPrincipal(ttk.Frame):
      self.fields_frame = ttk.LabelFrame(self.objeto_frame, text="Contenido", )
      self.fields_frame.pack(pady=10)     
      obj = r_deldia[n_deldia]
-<<<<<<< HEAD
-    #  for key, value in obj.items():
-    #         print(key)
-    #         print(value)
-
-     max_label_width = 0  # variable para almacenar el ancho del label más ancho
-
-     for key, value in obj.items():
-          # crear y empaquetar label de clave
-          field_label = ttk.Label(self.fields_frame, text=key+":", anchor="e", justify="right")
-          field_label.pack(side="top", padx=10, pady=5)
-          
-          # obtener el ancho requerido del label de clave
-          label_width = field_label.winfo_reqwidth()
-          if label_width > max_label_width:
-              max_label_width = label_width
-          
-          # crear y empaquetar label de valor
-          value_label = ttk.Label(self.fields_frame, text=value, anchor="w", justify="left")
-          value_label.pack(side="top", padx=10, pady=5)
-
-     # establecer el ancho del LabelFrame de acuerdo con el ancho requerido del label más ancho
-=======
     
 
      max_label_width = 0  # variable para almacenar el ancho del label más ancho
@@ -196,7 +173,6 @@ class VentanaPrincipal(ttk.Frame):
     
      # establecer el ancho del LabelFrame de acuerdo con el ancho requerido del label más ancho
      #self.fields_frame.configure(width=1000+20)  # sumar un padding de 20 para dar espacio adicional
->>>>>>> 7a04d3b6933029c1b5f2f79f0b2990c3f14f97be
      self.fields_frame.configure(width=max_label_width+20)  # sumar un padding de 20 para dar espacio adicional
  
      # Establecer el estilo de los frames
