@@ -14,4 +14,4 @@ class Receta:
         ingrediente = Ingrediente(nombre, cantidad, unidad_de_medida)
         self.ingredientes.append(ingrediente)
 
-#prueba pull request
+#prueba pull request 
