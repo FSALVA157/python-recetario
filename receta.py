@@ -13,3 +13,5 @@ class Receta:
     def agregar_ingrediente(self, nombre, cantidad, unidad_de_medida):
         ingrediente = Ingrediente(nombre, cantidad, unidad_de_medida)
         self.ingredientes.append(ingrediente)
+
+#prueba pull request
