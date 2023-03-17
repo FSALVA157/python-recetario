@@ -3,6 +3,63 @@ from usuarios import *
 from recetario import *
 import json
 
+recet = Recetario()
+llave = "sopa"
+valor = {
+        "ingredientes": [
+            {
+                "nombre": "papa",
+                "cantidad": "1",
+                "unidad_de_medida": "kg"
+            },
+            {
+                "nombre": "carne",
+                "cantidad": "0.5",
+                "unidad_de_medida": "kg"
+            }
+        ],
+        "preparacion": [
+            "picar papa",
+            "picar carne"
+        ],
+        "imagenes": [
+            "/img/carne.jpg",
+            "/img/plato.png",
+        ],
+        "duracion": "30 min",
+        "coccion": "60 min",
+        "fecha": "03/03/2023",
+        "etiquetas": [
+            "sopa",
+            "carne",
+            "caliente"
+        ],
+        "favorita": True
+    }
+
+#   llave = "guiso" 
+#   valor =  {
+#     "ingredientes": [
+#       { "nombre": "papa", "cantidad": "1", "unidad_de_medida": "kg" },
+#       { "nombre": "carne", "cantidad": "0.5", "unidad_de_medida": "kg" }
+#     ],
+#     "preparacion": ["picar papa", "picar carne"],
+#     "imagenes": ["ruta imagen 1", "ruta imagen 2"],
+#     "duracion": "30 min",
+#     "coccion": "60 min",
+#     "fecha": "03/03/2023",
+#     "etiquetas": ["guiso", "carne", "caliente"],
+#     "favorita": True
+#   },
+
+#recet.filterByLabel('guiso')
+#print(recet.filterByLabel('jamon'))
+#recet.crearDB()
+#print(recet.getOne('guiso')['receta'])
+#print(recet.updateOne('sopa',valor)['message'])
+#print(recet.getAll()['recetas'])
+#print(recet.delOne("sopa"))
+print(recet.addOne(llave,valor))
 #archivo1 = FileManager('genericoDB.json')
 #archivo1.create({"Guiso": "Receta de Guiso","Sopa": "Receta de Sopa","Empanada": "Receta de Empanada"})
 #print(archivo1.getAll())
@@ -20,7 +77,8 @@ import json
 #print(archivo1.deleteOne("Pizza"))
 #print(archivo1.updateOne("Sopa","sopa de cabello de angel"))
 
-#yo = Usuarios()
+# yo = Usuarios()
+# print(yo.crear_usuario("pepe120", "123456"))
 #yo.crearDB()
 # print(yo.login("xxavier","123456"))
 #data = yo.mostrar_usuarios()["usuarios"]
@@ -30,5 +88,5 @@ import json
 #print(res)
 # res = yo.eliminar_usuario("marcus")
 # print(res)
-cocinera = Recetario()
-cocinera.crearDB()
+# cocinera = Recetario()
+# cocinera.crearDB()

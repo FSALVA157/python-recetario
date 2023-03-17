@@ -28,6 +28,6 @@
             "carne",
             "caliente"
         ],
-        "favorita": "True"
+        "favorita": true
     }
 }
