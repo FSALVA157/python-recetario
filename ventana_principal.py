@@ -4,6 +4,7 @@ from ttkthemes import ThemedTk
 import tkinter.messagebox as messagebox
 from recetario import *
 from ventana_creareceta import *
+from PIL import Image, ImageTk
 
 class VentanaPrincipal(ttk.Frame):
 
@@ -61,7 +62,7 @@ class VentanaPrincipal(ttk.Frame):
 
         self.button2 = ttk.Button(self.menu_frame, text="Listar Recetas")
         self.button2.pack(pady=10, padx=10)
-
+        
     def create_main_frame(self):
      self.main_frame = ttk.Frame(self.master)
      self.main_frame.pack(side="right", fill="both", expand=True)
@@ -123,6 +124,10 @@ class VentanaPrincipal(ttk.Frame):
         #  fila_boton_editar = ttk.Button(fila_frame, text="Editar", style="Botones.TButton",command=lambda: self.recetas_service.delOne(dato))
          fila_boton_editar = ttk.Button(fila_frame, text="Editar", style="Botones.TButton")
          fila_boton_editar.pack(side="left", padx=10, pady=10)
+
+                  # Agregar el botón de eliminar
+         fila_boton_mostrar = ttk.Button(fila_frame, text="Mostrar", style="Botones.TButton")         
+         fila_boton_mostrar.pack(side="left", padx=10, pady=10)
  
          # Agregar el botón de eliminar
          fila_boton_eliminar = ttk.Button(fila_frame, text="Eliminar", style="Botones.TButton",command=lambda valor = dato: self.del_receta(valor))         
@@ -132,25 +137,36 @@ class VentanaPrincipal(ttk.Frame):
      self.objeto_frame = ttk.Frame(self.panedwindow)
      self.objeto_frame.configure(style="Objeto.TFrame")
      self.panedwindow.add(self.objeto_frame)
+
+     '''Antes de empezar tomo los datos de receta del dia para ver que imagen voy a mostrar'''
+     obj = r_deldia[n_deldia]
+
+     img_name = obj["imagenes"][0]
+
+     self.label_img = tk.Label(self.objeto_frame)
+     self.label_img.pack(side='left', padx=10, pady=10)
+
+     imagen = Image.open(f"img/{img_name}")      
+     imagen = imagen.resize((400, 400), Image.ANTIALIAS)
+     imagen_tk = ImageTk.PhotoImage(imagen)
+
+     self.label_img.configure(image=imagen_tk)
+     self.label_img.image = imagen_tk
  
      # Agregar los widgets para mostrar el objeto
      self.label_titulo = ttk.Label(self.objeto_frame, text=n_deldia)
      self.label_titulo.pack(pady=10)
  
-    #  self.label_descripcion = ttk.Label(self.objeto_frame, text="Descripción del objeto")
-    #  self.label_descripcion.pack(pady=10)
+
+    
      self.fields_frame = ttk.LabelFrame(self.objeto_frame, text="Receta del Dia", )
      self.fields_frame.pack(pady=10)     
-     obj = r_deldia[n_deldia]
-    #  for key, value in obj.items():
-    #         print(key)
-    #         print(value)
+    
 
      max_label_width = 0  # variable para almacenar el ancho del label más ancho
      field_font = ('TkDefaultFont', 14)
      row_count = 0  # contador de filas
-     for key, value in obj.items():
-        
+     for key, value in obj.items():        
         # crear y empaquetar label de clave en la columna 0
         field_label = ttk.Label(self.fields_frame, text=key+":", anchor="e", justify="right", font=field_font)
         field_label.grid(column=0, row=row_count, padx=(10, 5), pady=5, sticky='e')
@@ -161,8 +177,7 @@ class VentanaPrincipal(ttk.Frame):
             max_label_width = label_width
         
         # crear y empaquetar label de valor en la columna 1
-        #value_label = ttk.Label(self.fields_frame, text=value, anchor="w", justify="left", font=field_font)
-        #value_label.grid(column=1, row=row_count, padx=(0, 10), pady=5, sticky='w')
+    
         # si el valor es una lista, crear un Listbox y empaquetarlo en la columna 1
         if isinstance(value, list):
             value_listbox = tk.Listbox(self.fields_frame, height=len(value))
@@ -187,8 +202,7 @@ class VentanaPrincipal(ttk.Frame):
      s = ttk.Style()
      s.configure("Main.TFrame", background="#4189A1")
      s.configure("Lista.TFrame", background="#E6E6E6")
-     s.configure("Objeto.TFrame", background="#D2D9E8")
-     #s.configure("Objeto.frame_obj", background="#D2D9E8")
+     #s.configure("Objeto.TFrame", background="#D2D9E8")     
 
 
 if __name__ == "__main__":

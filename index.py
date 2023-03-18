@@ -23,7 +23,7 @@ valor = {
             "picar carne"
         ],
         "imagenes": [
-            "/img/carne.jpg",
+            "sopa.jpg",
             "/img/plato.png",
         ],
         "duracion": "30 min",
