@@ -1,33 +1,28 @@
 {
-    "guiso": {
-        "ingredientes": [
-            {
-                "nombre": "papa",
-                "cantidad": "1",
-                "unidad_de_medida": "kg"
-            },
-            {
-                "nombre": "carne",
-                "cantidad": "0.5",
-                "unidad_de_medida": "kg"
-            }
-        ],
-        "preparacion": [
-            "picar papa",
-            "picar carne"
-        ],
-        "imagenes": [
-            "ruta imagen 1",
-            "ruta imagen 2"
-        ],
-        "duracion": "30 min",
-        "coccion": "60 min",
-        "fecha": "03/03/2023",
-        "etiquetas": [
-            "guiso",
-            "carne",
-            "caliente"
-        ],
-        "favorita": true
-    }
+  "guiso": {
+    "ingredientes": [
+      { "nombre": "papa", "cantidad": "1", "unidad_de_medida": "kg" },
+      { "nombre": "carne", "cantidad": "0.5", "unidad_de_medida": "kg" }
+    ],
+    "preparacion": ["picar papa", "picar carne"],
+    "imagenes": ["guiso.jpg", "ruta imagen 2"],
+    "duracion": "30 min",
+    "coccion": "60 min",
+    "fecha": "03/03/2023",
+    "etiquetas": ["guiso", "carne", "caliente"],
+    "favorita": true
+  },
+  "sopa": {
+    "ingredientes": [
+      { "nombre": "papa", "cantidad": "1", "unidad_de_medida": "kg" },
+      { "nombre": "carne", "cantidad": "0.5", "unidad_de_medida": "kg" }
+    ],
+    "preparacion": ["picar papa", "picar carne"],
+    "imagenes": ["sopa.jpg", "/img/plato.png"],
+    "duracion": "30 min",
+    "coccion": "60 min",
+    "fecha": "03/03/2023",
+    "etiquetas": ["sopa", "carne", "caliente"],
+    "favorita": true
+  }
 }
