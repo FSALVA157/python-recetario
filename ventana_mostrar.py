@@ -16,12 +16,32 @@ class VentanaMostrar(ttk.Frame):
         super().__init__(master)
         self.master = master
         self.master.title("Mostrar Receta")
+        self.master.geometry("800x500")
         self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
 
         #instanciamos la clase controlador de Receta
         self.recetas_service = Recetario()
 
+        tk.Label(self, text="Nombre de la receta a mostrar: ").grid(row=0, column=0)
+        self.nombre_receta = tk.Entry(self)
+        self.nombre_receta.grid(row=0, column=1)
+
+        tk.Button(self, text="Buscar", command=self.mostrar).grid(row=2, column=2)
+
+
+
+        self.grid()
+
     def mostrar(self):
         
-        clave = self.buscador
-        res= self.recetas_service.getOne(key)
+        nombre = self.buscador
+        res= self.recetas_service.getOne(nombre)
+        
+
+
+if __name__ == "__main__":
+    #root = tk.Tk()
+    root = ThemedTk(theme="ubuntu")
+    vent=VentanaMostrar(master=root)
+    vent.mainloop()
+    
