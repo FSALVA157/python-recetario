@@ -16,7 +16,7 @@ class VentanaCreareceta(ttk.Frame):
         super().__init__(master)
         self.master = master
         self.master.title("Crear Receta")
-        self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
+        self.master.configure(bg="#F5F5F5") # Configura el color de fondo en celeste
         self.ingredientes= []
 
         #instanciamos la clase controlador de Receta
@@ -42,7 +42,7 @@ class VentanaCreareceta(ttk.Frame):
         self.un_medida = tk.Entry(self)
         self.un_medida.grid(row=3, column=2)
 
-        tk.Label(self, text="Preparación: ").grid(row=4, column=0)
+        tk.Label(self, text='Preparación (separar los pasos con " , ")').grid(row=4, column=0)
         self.preparacion = tk.Entry(self)
         self.preparacion.grid(row=4, column=1)
 
@@ -83,7 +83,7 @@ class VentanaCreareceta(ttk.Frame):
           Funcion que permite consumir los datos de todos los campos entrados en los widgets de la ventana
         """
         nombre=self.nombre_receta.get()
-        preparacion= self.preparacion.get()
+        preparacion= self.preparacion.get().split(",")
         imagenes= [self.imagenes.get()]
         duracion= self.duracion.get()
         coccion= self.coccion.get()

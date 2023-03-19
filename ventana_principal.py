@@ -4,6 +4,7 @@ from ttkthemes import ThemedTk
 import tkinter.messagebox as messagebox
 from recetario import *
 from ventana_creareceta import *
+from ventana_mostrar import *
 from PIL import Image, ImageTk
 
 class VentanaPrincipal(ttk.Frame):
@@ -27,6 +28,11 @@ class VentanaPrincipal(ttk.Frame):
          vent=VentanaCreareceta(master=root)
          vent.mainloop()
         
+    def abrir_mostrar_receta(self, key):
+          root = ThemedTk(theme="ubuntu")
+          vent=VentanaMostrar(key,master=root)
+          vent.mainloop()
+
     def del_receta(self, key):
         # método que elimina una receta
         resultado = self.recetas_service.delOne(key)
@@ -126,7 +132,7 @@ class VentanaPrincipal(ttk.Frame):
          fila_boton_editar.pack(side="left", padx=10, pady=10)
 
                   # Agregar el botón de eliminar
-         fila_boton_mostrar = ttk.Button(fila_frame, text="Mostrar", style="Botones.TButton")         
+         fila_boton_mostrar = ttk.Button(fila_frame, text="Mostrar", style="Botones.TButton",command=lambda valor = dato: self.abrir_mostrar_receta(valor))         
          fila_boton_mostrar.pack(side="left", padx=10, pady=10)
  
          # Agregar el botón de eliminar
