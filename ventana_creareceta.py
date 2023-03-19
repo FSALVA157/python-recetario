@@ -24,7 +24,6 @@ class VentanaCreareceta(ttk.Frame):
 
         # Creacion de los widgets con los entry correspondientes
         tk.Label(self, text="Nombre de la nueva receta: ").grid(row=0, column=0)
-        self.nombre_receta = tk.Entry(self)
         self.nombre_receta.grid(row=0, column=1)
 
         tk.Label(self, text="Ingredientes").grid(row=1, column=0)
