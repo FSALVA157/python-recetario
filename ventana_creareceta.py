@@ -16,7 +16,7 @@ class VentanaCreareceta(ttk.Frame):
         super().__init__(master)
         self.master = master
         self.master.title("Crear Receta")
-        self.master.configure(bg="#73C0C8") # Configura el color de fondo en celeste
+        self.master.configure(bg="#F5F5F5") # Configura el color de fondo en celeste
         self.ingredientes= []
 
         #instanciamos la clase controlador de Receta
