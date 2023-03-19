@@ -15,7 +15,7 @@ class VentanaMostrar(ttk.Frame):
     En esta clase creamos la ventana que permite mostar una receta buscada por el usuario
     """
 
-    def __init__(self, nombre_receta = "guiso", master=None):
+    def __init__(self, nombre_receta, master=None):
         super().__init__(master)
         self.master = master
         self.master.title(f"Receta de {nombre_receta} ")
