@@ -15,7 +15,12 @@ class VentanaMostrar(ttk.Frame):
     En esta clase creamos la ventana que permite mostar una receta buscada por el usuario
     """
 
+<<<<<<< HEAD
     def __init__(self, nombre_receta = "guiso" , master=None):
+=======
+    def __init__(self, nombre_receta="guiso", master=None):
+        
+>>>>>>> eaa45cc6fae0575b46f130881339f6884fa1715a
         super().__init__(master)
         self.master = master
         self.master.title(f"Receta de {nombre_receta} ")
@@ -28,7 +33,7 @@ class VentanaMostrar(ttk.Frame):
         res= self.recetas_service.getOne(nombre_receta)
         if res["status"] == True:
             self.data = res["receta"][nombre_receta]
-            print(self.data)
+        
         else:
             self.data = {}
 
@@ -78,13 +83,16 @@ class VentanaMostrar(ttk.Frame):
 
 
         # Creamos el Frame para la imagen
-        imagen_frame = ttk.Frame(self)
-        imagen_frame.grid(row=30, column=6, padx=25, pady=25, sticky='w')
-    
+        self.imagen_frame = ttk.Frame(self)
+        self.imagen_frame.grid(row=30, column=6, padx=25, pady=25, sticky='w')        
+        
         imagen = Image.open(f"img/{self.data['imagenes'][0]}")
         imagen = imagen.resize((400, 400), Image.ANTIALIAS)
         imagen_tk = ImageTk.PhotoImage(imagen)
-        self.label_img = ttk.Label(imagen_frame, image=imagen_tk)
+
+        self.label_img = tk.Label(self.imagen_frame)
+
+        #self.label_img.configure(image=imagen_tk)
         self.label_img.image = imagen_tk
         self.label_img.pack()
 
