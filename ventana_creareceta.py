@@ -52,6 +52,7 @@ class VentanaCreareceta(ttk.Frame):
 
         tk.Label(self, text="Imagenes: ").grid(row=5, column=0)
         self.imagenes = tk.Entry(self)
+        self.imagenes.insert(0, "no-image.jpg")
         self.imagenes.grid(row=5, column=1)
 
         tk.Label(self, text="Duración de preparación: ").grid(row=6, column=0)

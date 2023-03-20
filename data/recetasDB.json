@@ -17,7 +17,7 @@
             "picar carne"
         ],
         "imagenes": [
-            "guiso.jpg",
+            "no-image.jpg",
             "ruta imagen 2"
         ],
         "duracion": "1 hora y media",
@@ -48,7 +48,7 @@
             "picar carne"
         ],
         "imagenes": [
-            "sopa.jpg",
+            "no-image.jpg",
             "/img/plato.png"
         ],
         "duracion": "30 min",
