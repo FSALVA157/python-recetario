@@ -16,7 +16,7 @@ class VentanaMostrar(ttk.Frame):
     En esta clase creamos la ventana que permite mostar una receta buscada por el usuario
     """
 
-    def __init__(self, nombre_receta = "guiso" , master=None):
+    def __init__(self, nombre_receta ="guiso" , master=None):
         super().__init__(master)
         self.master = master
         self.master.title(f"Receta de {nombre_receta} ")
@@ -50,10 +50,10 @@ class VentanaMostrar(ttk.Frame):
 
         tk.Label(self, text="Pasos de preparación").grid(row=0, column=1)
         listbox = tk.Listbox(self, height=len(self.data["preparacion"]))
-        row_count = 0
+        row_count2 = 0
         for item in self.data["preparacion"]: 
             listbox.insert(tk.END, item)
-            row_count += 1
+            row_count2 += 1
         listbox.grid(column=1, row=1, padx=(0, 10), pady=15, sticky='w')
 
 
@@ -69,10 +69,10 @@ class VentanaMostrar(ttk.Frame):
 
         tk.Label(self, text="Etiquetas").grid(row=0, column=3)
         listbox = tk.Listbox(self, height=len(self.data["etiquetas"]))
-        row_count = 0
+        row_count3 = 0
         for item in self.data["etiquetas"]: 
             listbox.insert(tk.END, item)
-            row_count += 1
+            row_count3 += 1
         listbox.grid(column=3, row=1, padx=(0, 10), pady=15, sticky='w')
 
         tk.Label(self, text="Es favorita: ").grid(row=4, column=4)
@@ -95,7 +95,7 @@ class VentanaMostrar(ttk.Frame):
 
         self.label_img = tk.Label(self.imagen_frame)
 
-        self.label_img.configure(image=imagen_tk)
+        #self.label_img.configure(image=imagen_tk)
         self.label_img.image = imagen_tk
         self.label_img.pack()
 

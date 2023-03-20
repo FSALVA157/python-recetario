@@ -46,7 +46,7 @@ class VentanaCreareceta(ttk.Frame):
         self.un_medida = tk.Entry(self)
         self.un_medida.grid(row=3, column=2)
 
-        tk.Label(self, text='Preparación (separar los pasos con " , ")').grid(row=4, column=0)
+        tk.Label(self, text='Preparación (separar los pasos con " , " ):').grid(row=4, column=0)
         self.preparacion = tk.Entry(self)
         self.preparacion.grid(row=4, column=1)
 
@@ -66,15 +66,15 @@ class VentanaCreareceta(ttk.Frame):
         self.fecha = tk.Entry(self)
         self.fecha.grid(row=8, column=1)
 
-        tk.Label(self, text="Etiquetas: ").grid(row=9, column=0)
+        tk.Label(self, text='Etiquetas(separar los pasos con " , "):').grid(row=9, column=0)
         self.etiqueta = tk.Entry(self)
         self.etiqueta.grid(row=9, column=1)
 
         """
         Creamos un Checkbox para indicar si la receta es favorita
         """
-        self.es_favorita = tk.IntVar() 
-        tk.Checkbutton(self, text="Si", variable=self.es_favorita).grid(row=10, column=1)
+        self.favorita = tk.IntVar() 
+        tk.Checkbutton(self, text="Si", variable=self.favorita).grid(row=10, column=1)
         tk.Label(self, text="Favorita (tildar si es favorita)").grid(row=10, column=0)
 
         """
@@ -96,11 +96,11 @@ class VentanaCreareceta(ttk.Frame):
         duracion= self.duracion.get()
         coccion= self.coccion.get()
         fecha= self.fecha.get()
-        etiquetas= [self.etiqueta.get()]
-        es_favorita= self.es_favorita.get() == 1
+        etiquetas= self.etiqueta.get().split(",")
+        favorita= self.favorita.get() == 1
 
-        receta= {"ingredietes": self.ingredientes, "preparacion": preparacion, "imagenes": imagenes, "duracion": duracion,
-                 "coccion": coccion, "fecha": fecha, "etiquetas": etiquetas, "es_favorita": es_favorita}
+        receta= {"ingredientes": self.ingredientes, "preparacion": preparacion, "imagenes": imagenes, "duracion": duracion,
+                 "coccion": coccion, "fecha": fecha, "etiquetas": etiquetas, "favorita": favorita}
 
         """
         LLamamos al metodo addone del servicio
@@ -129,7 +129,7 @@ class VentanaCreareceta(ttk.Frame):
         """
         se agrega los datos tomados en una lista
         """
-        self.ingredientes.append({"nombre": nombre, "cantidad": cantidad, "unidad de medida": unidad})
+        self.ingredientes.append({"nombre": nombre, "cantidad": cantidad, "unidad_de_medida": unidad})
 
         
         self.nomb_ingr.delete(0, tk.END)
