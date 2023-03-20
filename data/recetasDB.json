@@ -24,5 +24,42 @@
     "fecha": "03/03/2023",
     "etiquetas": ["sopa", "carne", "caliente"],
     "favorita": true
+  },
+  "pizza": {
+    "ingredientes": [
+      {
+        "nombre": " harina (harina 00)",
+        "cantidad": "1",
+        "unidad de medida": "kg"
+      },
+      {
+        "nombre": "sal fina",
+        "cantidad": "1",
+        "unidad de medida": "gr"
+      },
+      { "nombre": "agua tibia", "cantidad": "2", "unidad de medida": "gr" },
+      {
+        "nombre": "levadura fresca",
+        "cantidad": "30",
+        "unidad de medida": "gr"
+      }
+    ],
+    "preparacion": [
+      "mezclar en un recipiente el agua templada con la levadura fresca",
+      " en un bol amplio la harina y la sal  y acom\u00f3dalas en forma de volc\u00e1n. Vierte la mezcla anterior en el centro",
+      " empezar a amasar bien hasta que notes que la masa de pizza casera deja de pegarse en tus manos y puedes manejarla sin problemas",
+      " Cuando tengas la masa de pizza esponjosa lista",
+      " deber\u00e1s darle forma de tubo largo y cortarla en 4 particiones",
+      " reposar durante 45 minutos",
+      " Ahora deber\u00e1s extenderla con tus manos estirando desde el centro hacia los costados d\u00e1ndole forma circular",
+      " Una vez estirada",
+      " ya puedes a\u00f1adir la salsa para pizza casera y los ingredientes para pizza que prefieras"
+    ],
+    "imagenes": ["pizza.jpg", "/img/plato.png"],
+    "duracion": "15 min",
+    "coccion": "20 min",
+    "fecha": "19/03/2023",
+    "etiquetas": ["pizza" , "queso", "masa"],
+    "es_favorita": false
   }
 }
