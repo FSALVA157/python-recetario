@@ -1,1 +1,454 @@
-{"guiso": {"ingredientes": [{"nombre": "papa", "cantidad": "1", "unidad_de_medida": "kg"}, {"nombre": "carne", "cantidad": "0.5", "unidad_de_medida": "kg"}], "preparacion": ["picar papa", "picar carne"], "imagenes": ["guiso.jpg", "ruta imagen 2"], "duracion": "30 min", "coccion": "60 min", "fecha": "03/03/2023", "etiquetas": ["guiso", "carne", "caliente"], "favorita": true}, "sopa": {"ingredientes": [{"nombre": "papa", "cantidad": "1", "unidad_de_medida": "kg"}, {"nombre": "carne", "cantidad": "0.5", "unidad_de_medida": "kg"}], "preparacion": ["picar papa", "picar carne"], "imagenes": ["sopa.jpg", "/img/plato.png"], "duracion": "30 min", "coccion": "60 min", "fecha": "03/03/2023", "etiquetas": ["sopa", "carne", "caliente"], "favorita": true}, "pizza": {"ingredientes": [{"nombre": " harina 00", "cantidad": "1", "unidad_de_medida": "kg"}, {"nombre": "sal fina", "cantidad": "5", "unidad_de_medida": "gr"}, {"nombre": "agua tibia", "cantidad": "2", "unidad_de_medida": "gr"}, {"nombre": "levadura fresca", "cantidad": "30", "unidad_de_medida": "gr"}], "preparacion": ["-mezclar en un recipiente el agua templada con la levadura fresca", "-en un bol amplio la harina y la sal  y acom\u00f3dalas en forma de volc\u00e1n. Vierte la mezcla anterior en el centro", "-empezar a amasar bien hasta que notes que la masa de pizza casera deja de pegarse en tus manos y puedes manejarla sin problemas", "-Cuando tengas la masa de pizza esponjosa lista", "-deber\u00e1s darle forma de tubo largo y cortarla en 4 particiones", "-reposar durante 45 minutos", "-Ahora deber\u00e1s extenderla con tus manos estirando desde el centro hacia los costados d\u00e1ndole forma circular", "-Una vez estirada", "-ya puedes a\u00f1adir la salsa para pizza casera y los ingredientes para pizza que prefieras"], "imagenes": ["pizza.jpg", "/img/plato.png"], "duracion": "15 min", "coccion": "20 min", "fecha": "19/03/2023", "etiquetas": ["pizza", "queso", "masa"], "favorita": false}, "pan": {"ingredientes": [{"nombre": " harina 00", "cantidad": "500", "unidad_de_medida": "gr"}, {"nombre": "agua", "cantidad": "300", "unidad_de_medida": "ml"}, {"nombre": "sal fina", "cantidad": "7", "unidad_de_medida": "gr"}, {"nombre": "levadura fresca", "cantidad": "30", "unidad_de_medida": "gr"}], "preparacion": ["-Pon el agua a temperatura ambiente en un bol y a\u00c3\u00b1ade el aceite y la levadura fresca o deshidratada y mezcla hasta que quede bien disuelta", "-A\u00c3\u00b1ade la harina, la sal y mezcla en el bol hasta que no puedas trabajarla m\u00c3\u00a1s dentro del bol", "-empezar a amasar bien ", "-Pasa la masa al m\u00c3\u00a1rmol cubierto con un poco de harina", "-Tras 5 minutos de amasado, la masa ya habr\u00c3\u00a1 ganado consistencia y elasticidad", "-Deja reposar la masa. Luego corta la masa y forma los panes", "-coc\u00c3\u00adnalos a fuego bajo y tapados durante aproximadamente 10 minutos"], "imagenes": ["pan.jpg", "/img/plato.png"], "duracion": "20 min", "coccion": "10 min", "fecha": "18/03/2023", "etiquetas": ["pan", "bollitos", "masa"], "favorita": false}, "sandwich": {"ingredientes": [{"nombre": "lomo", "cantidad": "1", "unidad_de_medida": "bife"}, {"nombre": "pan", "cantidad": "1", "unidad_de_medida": "unidad"}, {"nombre": "tomate", "cantidad": "c/n", "unidad_de_medida": "c/n"}], "preparacion": ["cocinar la carne a gusto", " cortar el pan a la mitad", " cortar el tomate", " poner el tomate y la carne dentro del pan. "], "imagenes": ["pan.jpg"], "duracion": "15 min", "coccion": "10 min", "fecha": "20/03/2023", "etiquetas": ["sandwich", "carne", "rapido"], "favorita": true}, "budin de pan ": {"ingredientes": [{"nombre": "leche", "cantidad": "1", "unidad_de_medida": "Litro"}, {"nombre": "pan duro ", "cantidad": "250", "unidad_de_medida": "gr"}, {"nombre": "preparado en polvo para flan", "cantidad": "200", "unidad_de_medida": "gr"}, {"nombre": "canela", "cantidad": "1/2 ", "unidad_de_medida": "cucharadita"}, {"nombre": "esencia de vainilla", "cantidad": "1", "unidad_de_medida": "cucharadita"}, {"nombre": "caramelo liquido", "cantidad": "c/n", "unidad_de_medida": "c/n"}], "preparacion": ["colocar el caramelo l\u00edquido en el molde o bandeja que quieras", " mezcla la esencia de vainilla con la leche", " Coloca el preparado en polvo para flan en un bol y a\u00f1ade la canela molida", " ve agregando poco a poco la leche y m\u00e9zclalo bien con ayuda de unas varillas", " traspasa la mezcla del pud\u00edn de pan sin horno a una olla y ll\u00e9vala a ebullici\u00f3n a fuego medio sin parar de remover con las varillas", " Una vez que hierva", " echa la mezcla sobre el pan del d\u00eda anterior para que se empape bien", " Remueve bien para que se integren todos los ingredientes", " Coloca la mezcla sobre el molde con el caramelo l\u00edquido y d\u00e9jalo enfriar a temperatura ambiente  "], "imagenes": ["budindepan.jpg"], "duracion": "1 hs", "coccion": "1 hs", "fecha": "20/03/2023", "etiquetas": ["budin", " pan", " postre"], "favorita": false}, "chipa": {"ingredientes": [{"nombre": "agua", "cantidad": "1/2 ", "unidad_de_medida": "taza"}, {"nombre": "leche", "cantidad": "1/2", "unidad_de_medida": "taza"}, {"nombre": "sal ", "cantidad": "1/4 ", "unidad_de_medida": "cucharada"}, {"nombre": "harina", "cantidad": "1", "unidad_de_medida": "taza"}, {"nombre": "fecula de maiz ", "cantidad": "1", "unidad_de_medida": "taza"}, {"nombre": "huevo", "cantidad": "1", "unidad_de_medida": "unidad"}, {"nombre": "qeuso rallado", "cantidad": "150", "unidad_de_medida": "gr"}], "preparacion": ["Primero pre calent\u00e1s el horno a 180\u00b0", "Pon\u00e9s a hervir el agua con la leche con la sal y el aceite", " Apenas empiece a hervir apag\u00e1s el fuego y a\u00f1adis la f\u00e9cula de una", "Dej\u00e1s que se enfrie un toque (pod\u00e9s pasar la mezcla a un bowl si quer\u00e9s hacerlo m\u00e1s r\u00e1pido) y le agreg\u00e1s el huevo. Se va a hacer un quilombo de nuevo", " pero vos mezcl\u00e1. (si el gordo te dice mezcl\u00e1", " mezcl\u00e1)", "Por \u00faltimo le a\u00f1ad\u00eds el queso", " unis todo y  untandote un poco de aceite en las manos", " empez\u00e1s a hacer las bolitas.", "Los pon\u00e9s en una fuente para horno", " dejando espacio entre ellos porque crecen", " y los horne\u00e1s durante unos 20 o 25 minutos", " o hasta que los veas bien dorados."], "imagenes": ["chipa.jpg"], "duracion": "15 min", "coccion": "15 min", "fecha": "20/03/2023", "etiquetas": ["chipa", " queso", " merienda", " mate"], "favorita": false}, "cafe irlandes": {"ingredientes": [{"nombre": "caf\u00e9", "cantidad": "80", "unidad_de_medida": "ml"}, {"nombre": "whisky irland\u00e9s", "cantidad": "40", "unidad_de_medida": "ml"}, {"nombre": "nata batida", "cantidad": "40", "unidad_de_medida": "ml"}, {"nombre": "azucar moreno", "cantidad": "15", "unidad_de_medida": "gr"}], "preparacion": ["Calentaremos agua con el simple prop\u00f3sito de verterla en las copas donde vamos a preparar el caf\u00e9. Dejamos que la copa o copas se calientes y empezamos con el caf\u00e9. Preparamos un caf\u00e9 bien cargado", " mejor si es un caf\u00e9 espresso", " aunque sino tenemos este tipo de cafetera", " se puede preparar una cafetera italiana cargando bien de caf\u00e9.\nEchamos la medida del whisky Irland\u00e9s en un cazo con el az\u00facar y calentamos casi hasta que llegue a hervir. Removemos bien para integrar el az\u00facar en el whisky. Lo podemos flambear", " si queremos bajar un poco el alcohol para que no salga un caf\u00e9 tan fuerte", " pero es optativo.\nPreparamos una especie de crema batida o nata montada. Para ello montamos la nata o crema de leche (35% materia grasa)", " recuerda que la nata debe estar en la nevera unas horas antes de montarla para que est\u00e9 bien fr\u00eda. Usamos una batidora de varillas y comienza por la velocidad m\u00ednima.\nPodemos a\u00f1adir un poquito de az\u00facar para ayudar a montar (pero tampoco es necesario)", " es optativo. Debe quedar montada pero no en exceso", " siempre sin formar picos", " muy melosa y sin burbujas de aire visibles", " queremos crema de leche casi como nata montada. Reservamos."], "imagenes": ["cafeirlandes.jpg"], "duracion": "15 min", "coccion": "5 min", "fecha": "20/03/2023", "etiquetas": ["cafe", " whisky", " desayuno", " merienda"], "favorita": false}, "asado al horno": {"ingredientes": [{"nombre": "asado", "cantidad": "c/n", "unidad_de_medida": "c/n"}, {"nombre": "sal ", "cantidad": "c/n", "unidad_de_medida": "c/n"}], "preparacion": ["Encender el horno a temperatura bien alta", " mientras en una fuente grande", " humedecida con aceite de oliva", " colocar las tiras de costilla", " las cuales han sido salpimentadas.\nLlevar a horno", " disminuir la temperatura y dejar 10 minutos.\nCortar las verduras en rodajas gruesas", " dar vuelta la carne y agregar dichas verduras en la misma fuente", " condimentar con sal", " pimienta", " or\u00e9gano y laurel.\nDejar a fuego moderado", " dando vueltas la carne y verduras hasta que se doren."], "imagenes": ["asado.jpg"], "duracion": "15 min", "coccion": "45 min", "fecha": "20/03/2023", "etiquetas": ["asado", " horno", " departamento"], "favorita": false}, "choripan": {"ingredientes": [{"nombre": "chorizos", "cantidad": "c/n", "unidad_de_medida": "c/n"}, {"nombre": "panes", "cantidad": "c/n", "unidad_de_medida": "c/n"}, {"nombre": "chimichurri", "cantidad": "c/n", "unidad_de_medida": "c/n"}, {"nombre": "tomate", "cantidad": "c/n", "unidad_de_medida": "c/n"}], "preparacion": ["Abrimos los chorizos criollos por la mitad para que tengan mejor contacto con la parrilla o barbacoa. Cuando las brasas est\u00e9n en su punto", " ponemos los chorizos a asar", " comenzando por el lado de la piel para que nos quede bien crujiente.\n\nCuando se doren por ese lado tras unos cuatro minutos al fuego", " damos la vuelta a los criollos", " y colocamos un peso sobre ellos para evitar que se arqueen. Yo suelo usar uno que compr\u00e9 para hacer smash burgers que viene muy bien en las barbacoas y otras recetas a la plancha. Dejamos que se cocinen por el otro lado otros tres o cuatro minutos.\n\nAbrimos y tostamos ligeramente los panecillos aprovechando el calor de la parte lateral de la barbacoa. Mientras tanto", " habremos preparado un chimichurri casero tal como os ense\u00f1amos", " y picaremos un tomate en peque\u00f1os dados. Montamos los bocadillos y llevamos a la mesa para que lleguen bien calientes."], "imagenes": ["chiripan.jpg"], "duracion": "20", "coccion": "8", "fecha": "20/03/2023", "etiquetas": ["choripan", " parrilla", " tipico", ""], "favorita": false}}
+{
+    "guiso": {
+        "ingredientes": [
+            {
+                "nombre": "papa",
+                "cantidad": "1",
+                "unidad_de_medida": "kg"
+            },
+            {
+                "nombre": "carne",
+                "cantidad": "0.5",
+                "unidad_de_medida": "kg"
+            }
+        ],
+        "preparacion": [
+            "picar papa",
+            "picar carne"
+        ],
+        "imagenes": [
+            "guiso.jpg",
+            "ruta imagen 2"
+        ],
+        "duracion": "1 hora y media",
+        "coccion": "2 segundos",
+        "fecha": "03/03/2023",
+        "etiquetas": [
+            "guiso",
+            "carne",
+            "caliente"
+        ],
+        "favorita": true
+    },
+    "sopa": {
+        "ingredientes": [
+            {
+                "nombre": "papa",
+                "cantidad": "1",
+                "unidad_de_medida": "kg"
+            },
+            {
+                "nombre": "carne",
+                "cantidad": "0.5",
+                "unidad_de_medida": "kg"
+            }
+        ],
+        "preparacion": [
+            "picar papa",
+            "picar carne"
+        ],
+        "imagenes": [
+            "sopa.jpg",
+            "/img/plato.png"
+        ],
+        "duracion": "30 min",
+        "coccion": "60 min",
+        "fecha": "03/03/2023",
+        "etiquetas": [
+            "sopa",
+            "carne",
+            "caliente"
+        ],
+        "favorita": true
+    },
+    "pizza": {
+        "ingredientes": [
+            {
+                "nombre": " harina 00",
+                "cantidad": "1",
+                "unidad_de_medida": "kg"
+            },
+            {
+                "nombre": "sal fina",
+                "cantidad": "5",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "agua tibia",
+                "cantidad": "2",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "levadura fresca",
+                "cantidad": "30",
+                "unidad_de_medida": "gr"
+            }
+        ],
+        "preparacion": [
+            "-mezclar en un recipiente el agua templada con la levadura fresca",
+            "-en un bol amplio la harina y la sal  y acom\u00f3dalas en forma de volc\u00e1n. Vierte la mezcla anterior en el centro",
+            "-empezar a amasar bien hasta que notes que la masa de pizza casera deja de pegarse en tus manos y puedes manejarla sin problemas",
+            "-Cuando tengas la masa de pizza esponjosa lista",
+            "-deber\u00e1s darle forma de tubo largo y cortarla en 4 particiones",
+            "-reposar durante 45 minutos",
+            "-Ahora deber\u00e1s extenderla con tus manos estirando desde el centro hacia los costados d\u00e1ndole forma circular",
+            "-Una vez estirada",
+            "-ya puedes a\u00f1adir la salsa para pizza casera y los ingredientes para pizza que prefieras"
+        ],
+        "imagenes": [
+            "pizza.jpg",
+            "/img/plato.png"
+        ],
+        "duracion": "15 min",
+        "coccion": "20 min",
+        "fecha": "19/03/2023",
+        "etiquetas": [
+            "pizza",
+            "queso",
+            "masa"
+        ],
+        "favorita": false
+    },
+    "pan": {
+        "ingredientes": [
+            {
+                "nombre": " harina 00",
+                "cantidad": "500",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "agua",
+                "cantidad": "300",
+                "unidad_de_medida": "ml"
+            },
+            {
+                "nombre": "sal fina",
+                "cantidad": "7",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "levadura fresca",
+                "cantidad": "30",
+                "unidad_de_medida": "gr"
+            }
+        ],
+        "preparacion": [
+            "-Pon el agua a temperatura ambiente en un bol y a\u00c3\u00b1ade el aceite y la levadura fresca o deshidratada y mezcla hasta que quede bien disuelta",
+            "-A\u00c3\u00b1ade la harina, la sal y mezcla en el bol hasta que no puedas trabajarla m\u00c3\u00a1s dentro del bol",
+            "-empezar a amasar bien ",
+            "-Pasa la masa al m\u00c3\u00a1rmol cubierto con un poco de harina",
+            "-Tras 5 minutos de amasado, la masa ya habr\u00c3\u00a1 ganado consistencia y elasticidad",
+            "-Deja reposar la masa. Luego corta la masa y forma los panes",
+            "-coc\u00c3\u00adnalos a fuego bajo y tapados durante aproximadamente 10 minutos"
+        ],
+        "imagenes": [
+            "pan.jpg",
+            "/img/plato.png"
+        ],
+        "duracion": "20 min",
+        "coccion": "10 min",
+        "fecha": "18/03/2023",
+        "etiquetas": [
+            "pan",
+            "bollitos",
+            "masa"
+        ],
+        "favorita": false
+    },
+    "sandwich": {
+        "ingredientes": [
+            {
+                "nombre": "lomo",
+                "cantidad": "1",
+                "unidad_de_medida": "bife"
+            },
+            {
+                "nombre": "pan",
+                "cantidad": "1",
+                "unidad_de_medida": "unidad"
+            },
+            {
+                "nombre": "tomate",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            }
+        ],
+        "preparacion": [
+            "cocinar la carne a gusto",
+            " cortar el pan a la mitad",
+            " cortar el tomate",
+            " poner el tomate y la carne dentro del pan. "
+        ],
+        "imagenes": [
+            "pan.jpg"
+        ],
+        "duracion": "15 min",
+        "coccion": "10 min",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "sandwich",
+            "carne",
+            "rapido"
+        ],
+        "favorita": true
+    },
+    "budin de pan ": {
+        "ingredientes": [
+            {
+                "nombre": "leche",
+                "cantidad": "1",
+                "unidad_de_medida": "Litro"
+            },
+            {
+                "nombre": "pan duro ",
+                "cantidad": "250",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "preparado en polvo para flan",
+                "cantidad": "200",
+                "unidad_de_medida": "gr"
+            },
+            {
+                "nombre": "canela",
+                "cantidad": "1/2 ",
+                "unidad_de_medida": "cucharadita"
+            },
+            {
+                "nombre": "esencia de vainilla",
+                "cantidad": "1",
+                "unidad_de_medida": "cucharadita"
+            },
+            {
+                "nombre": "caramelo liquido",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            }
+        ],
+        "preparacion": [
+            "colocar el caramelo l\u00edquido en el molde o bandeja que quieras",
+            " mezcla la esencia de vainilla con la leche",
+            " Coloca el preparado en polvo para flan en un bol y a\u00f1ade la canela molida",
+            " ve agregando poco a poco la leche y m\u00e9zclalo bien con ayuda de unas varillas",
+            " traspasa la mezcla del pud\u00edn de pan sin horno a una olla y ll\u00e9vala a ebullici\u00f3n a fuego medio sin parar de remover con las varillas",
+            " Una vez que hierva",
+            " echa la mezcla sobre el pan del d\u00eda anterior para que se empape bien",
+            " Remueve bien para que se integren todos los ingredientes",
+            " Coloca la mezcla sobre el molde con el caramelo l\u00edquido y d\u00e9jalo enfriar a temperatura ambiente  "
+        ],
+        "imagenes": [
+            "budindepan.jpg"
+        ],
+        "duracion": "1 hs",
+        "coccion": "1 hs",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "budin",
+            " pan",
+            " postre"
+        ],
+        "favorita": false
+    },
+    "chipa": {
+        "ingredientes": [
+            {
+                "nombre": "agua",
+                "cantidad": "1/2 ",
+                "unidad_de_medida": "taza"
+            },
+            {
+                "nombre": "leche",
+                "cantidad": "1/2",
+                "unidad_de_medida": "taza"
+            },
+            {
+                "nombre": "sal ",
+                "cantidad": "1/4 ",
+                "unidad_de_medida": "cucharada"
+            },
+            {
+                "nombre": "harina",
+                "cantidad": "1",
+                "unidad_de_medida": "taza"
+            },
+            {
+                "nombre": "fecula de maiz ",
+                "cantidad": "1",
+                "unidad_de_medida": "taza"
+            },
+            {
+                "nombre": "huevo",
+                "cantidad": "1",
+                "unidad_de_medida": "unidad"
+            },
+            {
+                "nombre": "qeuso rallado",
+                "cantidad": "150",
+                "unidad_de_medida": "gr"
+            }
+        ],
+        "preparacion": [
+            "Primero pre calent\u00e1s el horno a 180\u00b0",
+            "Pon\u00e9s a hervir el agua con la leche con la sal y el aceite",
+            " Apenas empiece a hervir apag\u00e1s el fuego y a\u00f1adis la f\u00e9cula de una",
+            "Dej\u00e1s que se enfrie un toque (pod\u00e9s pasar la mezcla a un bowl si quer\u00e9s hacerlo m\u00e1s r\u00e1pido) y le agreg\u00e1s el huevo. Se va a hacer un quilombo de nuevo",
+            " pero vos mezcl\u00e1. (si el gordo te dice mezcl\u00e1",
+            " mezcl\u00e1)",
+            "Por \u00faltimo le a\u00f1ad\u00eds el queso",
+            " unis todo y  untandote un poco de aceite en las manos",
+            " empez\u00e1s a hacer las bolitas.",
+            "Los pon\u00e9s en una fuente para horno",
+            " dejando espacio entre ellos porque crecen",
+            " y los horne\u00e1s durante unos 20 o 25 minutos",
+            " o hasta que los veas bien dorados."
+        ],
+        "imagenes": [
+            "chipa.jpg"
+        ],
+        "duracion": "15 min",
+        "coccion": "15 min",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "chipa",
+            " queso",
+            " merienda",
+            " mate"
+        ],
+        "favorita": false
+    },
+    "cafe irlandes": {
+        "ingredientes": [
+            {
+                "nombre": "caf\u00e9",
+                "cantidad": "80",
+                "unidad_de_medida": "ml"
+            },
+            {
+                "nombre": "whisky irland\u00e9s",
+                "cantidad": "40",
+                "unidad_de_medida": "ml"
+            },
+            {
+                "nombre": "nata batida",
+                "cantidad": "40",
+                "unidad_de_medida": "ml"
+            },
+            {
+                "nombre": "azucar moreno",
+                "cantidad": "15",
+                "unidad_de_medida": "gr"
+            }
+        ],
+        "preparacion": [
+            "Calentaremos agua con el simple prop\u00f3sito de verterla en las copas donde vamos a preparar el caf\u00e9. Dejamos que la copa o copas se calientes y empezamos con el caf\u00e9. Preparamos un caf\u00e9 bien cargado",
+            " mejor si es un caf\u00e9 espresso",
+            " aunque sino tenemos este tipo de cafetera",
+            " se puede preparar una cafetera italiana cargando bien de caf\u00e9.\nEchamos la medida del whisky Irland\u00e9s en un cazo con el az\u00facar y calentamos casi hasta que llegue a hervir. Removemos bien para integrar el az\u00facar en el whisky. Lo podemos flambear",
+            " si queremos bajar un poco el alcohol para que no salga un caf\u00e9 tan fuerte",
+            " pero es optativo.\nPreparamos una especie de crema batida o nata montada. Para ello montamos la nata o crema de leche (35% materia grasa)",
+            " recuerda que la nata debe estar en la nevera unas horas antes de montarla para que est\u00e9 bien fr\u00eda. Usamos una batidora de varillas y comienza por la velocidad m\u00ednima.\nPodemos a\u00f1adir un poquito de az\u00facar para ayudar a montar (pero tampoco es necesario)",
+            " es optativo. Debe quedar montada pero no en exceso",
+            " siempre sin formar picos",
+            " muy melosa y sin burbujas de aire visibles",
+            " queremos crema de leche casi como nata montada. Reservamos."
+        ],
+        "imagenes": [
+            "cafeirlandes.jpg"
+        ],
+        "duracion": "15 min",
+        "coccion": "5 min",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "cafe",
+            " whisky",
+            " desayuno",
+            " merienda"
+        ],
+        "favorita": false
+    },
+    "asado al horno": {
+        "ingredientes": [
+            {
+                "nombre": "asado",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            },
+            {
+                "nombre": "sal ",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            }
+        ],
+        "preparacion": [
+            "Encender el horno a temperatura bien alta",
+            " mientras en una fuente grande",
+            " humedecida con aceite de oliva",
+            " colocar las tiras de costilla",
+            " las cuales han sido salpimentadas.\nLlevar a horno",
+            " disminuir la temperatura y dejar 10 minutos.\nCortar las verduras en rodajas gruesas",
+            " dar vuelta la carne y agregar dichas verduras en la misma fuente",
+            " condimentar con sal",
+            " pimienta",
+            " or\u00e9gano y laurel.\nDejar a fuego moderado",
+            " dando vueltas la carne y verduras hasta que se doren."
+        ],
+        "imagenes": [
+            "asado.jpg"
+        ],
+        "duracion": "15 min",
+        "coccion": "45 min",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "asado",
+            " horno",
+            " departamento"
+        ],
+        "favorita": false
+    },
+    "choripan": {
+        "ingredientes": [
+            {
+                "nombre": "chorizos",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            },
+            {
+                "nombre": "panes",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            },
+            {
+                "nombre": "chimichurri",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            },
+            {
+                "nombre": "tomate",
+                "cantidad": "c/n",
+                "unidad_de_medida": "c/n"
+            }
+        ],
+        "preparacion": [
+            "Abrimos los chorizos criollos por la mitad para que tengan mejor contacto con la parrilla o barbacoa. Cuando las brasas est\u00e9n en su punto",
+            " ponemos los chorizos a asar",
+            " comenzando por el lado de la piel para que nos quede bien crujiente.\n\nCuando se doren por ese lado tras unos cuatro minutos al fuego",
+            " damos la vuelta a los criollos",
+            " y colocamos un peso sobre ellos para evitar que se arqueen. Yo suelo usar uno que compr\u00e9 para hacer smash burgers que viene muy bien en las barbacoas y otras recetas a la plancha. Dejamos que se cocinen por el otro lado otros tres o cuatro minutos.\n\nAbrimos y tostamos ligeramente los panecillos aprovechando el calor de la parte lateral de la barbacoa. Mientras tanto",
+            " habremos preparado un chimichurri casero tal como os ense\u00f1amos",
+            " y picaremos un tomate en peque\u00f1os dados. Montamos los bocadillos y llevamos a la mesa para que lleguen bien calientes."
+        ],
+        "imagenes": [
+            "chiripan.jpg"
+        ],
+        "duracion": "20",
+        "coccion": "8",
+        "fecha": "20/03/2023",
+        "etiquetas": [
+            "choripan",
+            " parrilla",
+            " tipico",
+            ""
+        ],
+        "favorita": false
+    }
+}

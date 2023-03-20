@@ -5,6 +5,7 @@ import tkinter.messagebox as messagebox
 from recetario import *
 from ventana_creareceta import *
 from ventana_mostrar import *
+from ventana_editar import *
 from PIL import Image, ImageTk
 
 """
@@ -48,6 +49,15 @@ class VentanaPrincipal(ttk.Frame):
         root = ThemedTk(theme="ubuntu")
         vent=VentanaMostrar(key,master=root)
         vent.mainloop()
+
+    def abrir_editar_receta(self, key):
+        """
+        método que abre la ventana para editar una receta
+        """
+        root = ThemedTk(theme="ubuntu")
+        vent=VentanaEditar(key,master=root)
+        vent.mainloop()
+
 
     def del_receta(self, key):
         """
@@ -156,7 +166,7 @@ class VentanaPrincipal(ttk.Frame):
          fila_texto = ttk.Label(fila_frame, text=dato, font=("Arial", 14))
          fila_texto.pack(side="left", padx=10, pady=10)
  
-         fila_boton_editar = ttk.Button(fila_frame, text="Editar", style="Botones.TButton")
+         fila_boton_editar = ttk.Button(fila_frame, text="Editar", style="Botones.TButton",command=lambda valor = dato: self.abrir_editar_receta(valor))
          fila_boton_editar.pack(side="left", padx=10, pady=10)
 
          fila_boton_mostrar = ttk.Button(fila_frame, text="Mostrar", style="Botones.TButton",command=lambda valor = dato: self.abrir_mostrar_receta(valor))         
