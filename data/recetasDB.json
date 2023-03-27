@@ -20,7 +20,7 @@
             "no-image.jpg",
             "ruta imagen 2"
         ],
-        "duracion": "1 hora y media",
+        "duracion": "2 dias",
         "coccion": "2 segundos",
         "fecha": "03/03/2023",
         "etiquetas": [
@@ -182,9 +182,9 @@
         "imagenes": [
             "pan.jpg"
         ],
-        "duracion": "15 min",
-        "coccion": "10 min",
-        "fecha": "20/03/2023",
+        "duracion": "1 hora",
+        "coccion": "2 horas",
+        "fecha": "",
         "etiquetas": [
             "sandwich",
             "carne",
@@ -395,9 +395,9 @@
         "imagenes": [
             "asado.jpg"
         ],
-        "duracion": "15 min",
-        "coccion": "45 min",
-        "fecha": "20/03/2023",
+        "duracion": "1 hora",
+        "coccion": "",
+        "fecha": "",
         "etiquetas": [
             "asado",
             " horno",
@@ -438,7 +438,7 @@
             " y picaremos un tomate en peque\u00f1os dados. Montamos los bocadillos y llevamos a la mesa para que lleguen bien calientes."
         ],
         "imagenes": [
-            "chiripan.jpg"
+            "choripan.jpg"
         ],
         "duracion": "20",
         "coccion": "8",

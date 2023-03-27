@@ -110,6 +110,8 @@ class VentanaEditar(ttk.Frame):
 
         ttk.Button(self, text="Guardar", command=self.guardar_receta).grid(row=10, column=1)
 
+
+
         self.grid()  
     
 
